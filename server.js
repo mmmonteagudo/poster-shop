@@ -11,6 +11,10 @@ app.get("/", function(req, res) {
 	res.sendFile(path.join(__dirname + "/index.html"));
 });
 
+app.get("/tester", function(req, res) {
+	res.sendFile(path.join(__dirname + "/tester.html"));
+});
+
 var directory;
 fs.readFile("./directory.json", "utf8", function(err, data) {
 	directory = JSON.parse(data);
